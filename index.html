@@ -197,47 +197,7 @@ A specialized module for the database, if available, would always be preferable 
 <pre lang="text"><code>$ java -Djava.io.tmpdir=/media/BIGHD/tmp -jar dbptk-app-x.y.z.jar ...
 </code></pre>
 
-<h2>
-<a id="information--commercial-support" class="anchor" href="#information--commercial-support" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Information &amp; Commercial support</h2>
 
-<p>For more information or commercial support, contact <a href="http://www.keep.pt/contactos/?lang=en">KEEP SOLUTIONS</a>.</p>
-
-<h2>
-<a id="development-" class="anchor" href="#development-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Development <a href="https://travis-ci.org/keeps/db-preservation-toolkit"><img src="https://travis-ci.org/keeps/db-preservation-toolkit.png?branch=master" alt="Build Status"></a>
-</h2>
-
-<p>To develop we recommend the use of Maven and Eclipse.</p>
-
-<p>The following plugins should be installed in Eclipse:</p>
-
-<ul>
-<li>
-<a href="http://marketplace.eclipse.org/content/ansi-escape-console">ANSI Escape in Console</a> to have coloured output in tests</li>
-</ul>
-
-<p>And the following environment variables should be set:</p>
-
-<ul>
-<li>
-<strong>DPT_MYSQL_USER</strong> - MySQL user that must be able to create new users and give them permissions (uses 'root' if not defined)</li>
-<li>
-<strong>DPT_MYSQL_PASS</strong> - MySQL user's password (uses blank password if not defined)</li>
-<li>
-<strong>DPT_POSTGRESQL_USER</strong> - PostgreSQL user that must be able to create new users and give them permissions (uses 'postgres' if not defined)</li>
-<li>
-<strong>DPT_POSTGRESQL_PASS</strong> - PostgreSQL user's password (uses blank password if not defined)</li>
-</ul>
-
-<p>To run PostgreSQL tests, a local PostgreSQL database is required and <em>postgres</em> user or another user with permission to create new databases and users can be used. This user must be accessible by IP connection on localhost. The access can be tested with <code>psql -U username -h 127.0.0.1 -d postgres -W</code>.</p>
-
-<p>To run MySQL tests, a local MySQL (or MariaDB) database is required and 'root' user or another user with permission to create new databases and users can be used. This user must be accessible by IP connection on localhost. The access can be tested with <code>mysql --user="username" -p --database="mysql" --host="127.0.0.1"</code>.</p>
-
-<h3>
-<a id="changing-xml-schema-files" class="anchor" href="#changing-xml-schema-files" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Changing XML Schema files</h3>
-
-<p>After changing SIARD XML Schema files, maven must be used to compile a new artifact from the XML Schema (using JAXB). To do this, run <code>mvn clean install -Pdbptk-bindings</code> from project root folder.</p>
-
-<p>The jars should now be installed in <code>&lt;project_dir&gt;/vendor-libs</code> (and also in your local maven repository).</p>
 
 <h2>
 <a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
